@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Message } from 'primereact/message';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
+import './../Login.css';
 
 export default function LoginComponent() {
 
@@ -42,31 +43,29 @@ export default function LoginComponent() {
         }
     }
 
-    return(
-        <>
-        
-            <div className="container">
-                <form onSubmit={handleLogin}>
+    return (
+        <div className="login-container">
+            <div className="card">
+                <h1 id="h1-n1">HealthCare Innovations</h1>
+                <form onSubmit={handleLogin} className="p-fluid">
+                    <h2 className="title">Iniciar Sesión</h2>
 
-                    <div className="flex flex-wrap align-items-center mb-3 gap-2">
+                    <div className="field">
                         <label htmlFor="email" className="p-sr-only">Email</label>
                         <InputText id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Ingrese Correo" />
-                        {/* <Message severity="error" text="Correo es obligatorio" /> */}
-                    </div>
-                    <div className="flex flex-wrap align-items-center gap-2">
-                        <label htmlFor="password" className="p-sr-only">Contraseña</label>
-                        <InputText id="password" type='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Ingrese contraseña" />
-                        {/* <Message severity="error" text="Contraseña es obligatoria" /> */}
-                    </div>
-                    {errorMessage && <Message severity="error" text={errorMessage} />}
-                    {successMessage && <Message severity="success" text={successMessage} />}
-                    <div className="flex flex-wrap align-items-center gap-2">
-                            <Button label="Iniciar Sesion" type="submit"></Button>
                     </div>
 
+                    <div className="field">
+                        <label htmlFor="password" className="p-sr-only">Contraseña</label>
+                        <InputText id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Ingrese Contraseña" />
+                    </div>
+
+                    {errorMessage && <Message className="message message-error" severity="error" text={errorMessage} />}
+                    {successMessage && <Message className="message message-success" severity="success" text={successMessage} />}
+
+                    <Button id="iniciar" label="Ingresar" type="submit" />
                 </form>
             </div>
-        
-        </>
+        </div>
     );
 }
