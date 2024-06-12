@@ -1,0 +1,126 @@
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+} */
+
+.h1-ventas{
+    font-size: 46px;
+    text-align: center;
+    margin-left: -30px;
+    margin-bottom: 50px;
+}
+
+
+.sales-form {
+    margin-left: 40rem;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    background: #7d96c0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.sales-form h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.field {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Sales.css */
+
+dialog p{
+
+    text-align: center;
+
+}
+
+.modal-buttons {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.modal-buttons .p-button {
+
+    padding: 10px 20px;
+    margin:10px;
+}
+
+
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .sales-form {
+        padding: 20px;
+    }
+
+    .sales-form h1 {
+        font-size: 2em;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

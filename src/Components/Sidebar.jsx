@@ -155,10 +155,10 @@ export default function SidebarComponent() {
                         </div>
                     )}
                 ></Sidebar>
-            </div>
+            
 
             <Button icon="pi pi-align-justify" onClick={() => setVisible(true)} />
-
+            </div>
         </>
 
     );
