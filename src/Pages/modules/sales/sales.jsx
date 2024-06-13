@@ -21,35 +21,31 @@ export default function Sales() {
     };
 
     return (
-        <>
+        <div className="sales-container">
+            <div className="sales-blur-overlay"></div>
             <SidebarComponent />
-
-            <h1 className='h1-ventas'>Ventas</h1>
+            <h1 className='sales-h1-ventas'>Ventas</h1>
             <form className="sales-form" onSubmit={handleSubmit}>
-                <div className="field">
+                <div className="sales-field">
                     <label htmlFor="id">ID</label>
                     <InputText id="id" placeholder="Ingrese el ID" />
                 </div>
-
-                <div className="field">
+                <div className="sales-field">
                     <label htmlFor="pedido_id">Pedido ID</label>
                     <InputText id="pedido_id" placeholder="Ingrese el Pedido ID" />
                 </div>
-
-                <div className="field">
+                <div className="sales-field">
                     <label htmlFor="saldo_total">Saldo Total</label>
                     <InputText id="saldo_total" type="number" placeholder="Ingrese el Saldo Total" />
                 </div>
-
                 <Button label="Agregar Venta" type="submit" />
             </form>
-
             <Dialog header="Venta Modal" visible={visible} style={{ width: '50vw', textAlign: 'center', padding: '10px'}} onHide={hideDialog}>
-                <div className="modal-buttons">
+                <div className="sales-modal-buttons">
                     <Button label="Sí" icon="pi pi-check" className="p-button-success" onClick={hideDialog} />
                     <Button label="No" icon="pi pi-times" className="p-button-danger" onClick={hideDialog} />
                 </div>
             </Dialog>
-        </>
+        </div>
     );
 }

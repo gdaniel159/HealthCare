@@ -1,24 +1,38 @@
-/* body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-} */
+.sales-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Ajusta el alto según sea necesario */
+}
 
-.h1-ventas{
+.sales-blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1; /* Coloca la capa detrás del contenido */
+}
+
+.sales-container h1 {
     font-size: 46px;
     text-align: center;
     margin-left: -30px;
     margin-bottom: 50px;
+    color: rgb(0, 0, 0);
 }
-
 
 .sales-form {
     margin-left: 40rem;
     padding: 40px;
     width: 100%;
     max-width: 600px;
-    background: #7d96c0;
+    background: rgba(125, 150, 192, 0.9); /* Ajusta la transparencia del fondo del formulario */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -30,43 +44,32 @@
     font-size: 2.5em;
 }
 
-.field {
+.sales-field {
     width: 100%;
     margin-bottom: 20px;
     text-align: left;
 }
 
-/* Sales.css */
-
-dialog p{
-
-    text-align: center;
-
-}
-
-.modal-buttons {
+.sales-modal-buttons {
     font-size: 10px;
     display: flex;
     justify-content: center;
     margin: 0px;
 }
 
-.modal-buttons .p-button {
-
+.sales-modal-buttons .p-button {
     padding: 10px 20px;
-    margin:10px;
+    margin: 10px;
 }
 
-
-
-.field label {
+.sales-field label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #ffffff;
 }
 
-.field input {
+.sales-field input {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -76,7 +79,7 @@ dialog p{
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.field input:focus {
+.sales-field input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -96,6 +99,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #218838;
 }
+
 
 @media (max-width: 600px) {
     .container {
