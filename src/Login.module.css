@@ -1,9 +1,9 @@
 
-.login-container {
+.login_container {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('assets/fondo.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('../src/assets/fondo.jpg'); /* Reemplaza con la ruta de tu imagen */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.login-container::before {
+.login_container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -21,30 +21,6 @@
     background: rgba(0, 0, 0, 0.5); /* Color de fondo con opacidad */
     backdrop-filter: blur(10px); /* Aplicar blur */
     z-index: 1;
-}
-
-.card {
-    position: relative;
-    z-index: 2;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-}
-
-.card h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #1f4c9a;
-}
-
-.card .title {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #000000;
 }
 
 .field {
@@ -72,7 +48,7 @@
     border-color: #000000;
 }
 
-button#iniciar {
+#iniciar {
     width: 100%;
     padding: 10px;
     border: none;
@@ -84,7 +60,7 @@ button#iniciar {
     transition: all 0.3s;
 }
 
-button#iniciar:hover {
+#iniciar:hover {
     background: #0056b3;
 }
 

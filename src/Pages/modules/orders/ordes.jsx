@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import '../../../Pedidos.css';
+import styles from './Pedidos.module.css';
+import SidebarComponent from "../../../Components/Sidebar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Actividad = () => {
@@ -21,7 +22,7 @@ const Actividad = () => {
     };
 
     useEffect(() => {
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('myModal');
             if (event.target === modal) {
                 modal.style.display = 'none';
@@ -31,21 +32,22 @@ const Actividad = () => {
 
     return (
         <>
-            <div className=''>
+            <div className={`${styles.container}`}>
+                <SidebarComponent />
                 <div>
-                    <h1 className="texto-pedidos d-flex justify-content-center">Pedidos</h1>
+                    <h1 className={`${styles.texto_pedidos} d-flex justify-content-center`}>Pedidos</h1>
                 </div>
                 <div className='d-flex justify-content-center'>
-                    <div className='contenedor-formulario-pedidos'>
-                        <div className='contenedor-imputs-pedido'>
+                    <div className={`${styles.contenedor_formulario_pedidos}`}>
+                        <div className={`${styles.contenedor_imputs_pedido}`}>
                             <div className='d-flex justify-content-center '>
                                 <div className='mb-5 row'>
-                                    <div className='col-sm-12 pedido001'>
+                                    <div className={`col-sm-12 ${styles.pedido001}`}>
                                         <input type='text' className='form-control' id='input1' placeholder='ID del Pedido' />
                                     </div>
                                 </div>
                                 <div className='mb-5 row'>
-                                    <div className='col-sm-12 w-5 pedido002'>
+                                    <div className={`col-sm-12 ${styles.pedido002}`}>
                                         <input type='text' className='form-control' id='input2' placeholder='Nombre del Producto' />
                                     </div>
                                 </div>
@@ -53,30 +55,30 @@ const Actividad = () => {
 
                             <div className='d-flex justify-content-center'>
                                 <div className='mb-4 row'>
-                                    <div className='col-sm-12 pedido001'>
+                                    <div className={`col-sm-12 ${styles.pedido001}`}>
                                         <input type='text' className='form-control' id='input3' placeholder='ID Categoria' />
                                     </div>
                                 </div>
                                 <div className='mb-4 row'>
-                                    <div className='col-sm-12 w-1 pedido002'>
+                                    <div className={`col-sm-12 ${styles.pedido002}`}>
                                         <input type='text' className='form-control' id='input4' placeholder='Stock Total' />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className=''>
-                            <button className='boton-sector-pedido' onClick={handleAgregarClick}>Agregar</button>
+                            <button className={`${styles.boton_sector_pedido}`} onClick={handleAgregarClick}>Agregar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="myModal" className="modal">
-                <div className="modal-content">
-                    <span className="close" onClick={handleCloseModal}>&times;</span>
+            <div id="myModal" className={`${styles.modal}`}>
+                <div className={`${styles.modal_content}`}>
+                    <span className={`${styles.close}`} onClick={handleCloseModal}>&times;</span>
                     <div className='d-flex justify-content-between'>
-                    <button className='boton-sector-pedido-modal'>0001</button>
-                    <button className='boton-sector-pedido-modal'>0002</button>
+                        <button className={`${styles.boton_sector_pedido_modal}`}>0001</button>
+                        <button className={`${styles.boton_sector_pedido_modal}`}>0002</button>
 
                     </div>
                 </div>

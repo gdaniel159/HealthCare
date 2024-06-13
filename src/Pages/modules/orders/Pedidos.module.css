@@ -1,4 +1,9 @@
-.contenedor-formulario-pedidos {
+.container {
+    width: 80%;
+    margin: 30px auto;
+    /* border: 1px solid #000; */
+}
+.contenedor_formulario_pedidos {
     background-color: rgb(51, 51, 51);
     border-radius: 15px;
     width: 750px;
@@ -6,10 +11,10 @@
     /* border: 3px solid #8317ff;   */
 }
 
-.texto-pedidos {
+.texto_pedidos {
     color: black;
 }
-.contenedor-imputs-pedido {
+.contenedor_imputs_pedido {
     margin-top: 80px;
 
 }
@@ -22,7 +27,7 @@
     margin-right: -60px;
 
 }
-.boton-sector-pedido {
+.boton_sector_pedido {
     background-color: #274e97;
     width: 150px;
     border: none;
@@ -46,7 +51,7 @@
     padding-top: 90px;
 }
 
-.modal-content {
+.modal_content {
     background-color: #fefefe;
     margin: 5% auto;
     padding: 20px;
@@ -69,7 +74,7 @@
     cursor: pointer;
 }
 
-.boton-sector-pedido-modal {
+.boton_sector_pedido_modal {
     background-color: #274e97;
     width: 150px;
     border: none;

@@ -26,7 +26,7 @@ export default function Productos() {
 
             <div className={`${style.container}`}>
 
-                <div className='flex align-items-center justify-content-between' style={{border:"1px solid #000"}}>
+                <div className='flex align-items-center justify-content-between'>
                     <SidebarComponent />
                     <div className="crud-option-button">
                         <Button label='Crear' severity='success'></Button>
@@ -38,7 +38,7 @@ export default function Productos() {
                 </div>
 
                 <div className="table-products">
-                    <div className="card">
+                    <div className="card border-none">
                         <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
                             <Column field="code" header="Code"></Column>
                             <Column field="name" header="Name"></Column>

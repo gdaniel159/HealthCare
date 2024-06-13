@@ -120,10 +120,10 @@ export default function Inicio() {
                 </div>
 
                 <div className="charts-content flex align-items-center">
-                    <div className="card" style={{width:"50%"}}>
+                    <div className="card border-none" style={{width:"50%"}}>
                         <Chart type="bar" data={chartData} options={chartOptions} />
                     </div>
-                    <div className="card" style={{width:"50%"}}>
+                    <div className="card border-none" style={{width:"50%"}}>
                         <Chart type="bar" data={chartData2} options={chartOptions2} />
                     </div>
                 </div>

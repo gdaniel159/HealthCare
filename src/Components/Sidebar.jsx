@@ -50,7 +50,7 @@ export default function SidebarComponent() {
 
         <>
 
-            <div className="card flex justify-content-center">
+            <div className="card flex justify-content-center border-none">
                 <Sidebar
                     visible={visible}
                     onHide={() => setVisible(false)}
@@ -72,14 +72,14 @@ export default function SidebarComponent() {
                                             <li>
                                                 <ul className="list-none p-0 m-0 overflow-hidden">
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/home')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/home')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-home mr-2"></i>
                                                             <span className="font-medium">Dashboard</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/items')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/items')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-bookmark mr-2"></i>
                                                             <span className="font-medium">Productos</span>
                                                             <Ripple />
@@ -87,7 +87,7 @@ export default function SidebarComponent() {
                                                     </li>
                                                     <li>
                                                         <StyleClass nodeRef={btnRef1} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
-                                                            <a ref={btnRef1} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                            <a ref={btnRef1} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                                 <i className="pi pi-chart-line mr-2"></i>
                                                                 <span className="font-medium">Inventario</span>
                                                                 <i className="pi pi-chevron-down ml-auto mr-1"></i>
@@ -96,14 +96,14 @@ export default function SidebarComponent() {
                                                         </StyleClass>
                                                         <ul className="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
                                                             <li>
-                                                                <a onClick={() => handleNavigation('/items/inventory_report')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                                <a onClick={() => handleNavigation('/items/inventory_report')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                                     <i className="pi pi-table mr-2"></i>
                                                                     <span className="font-medium">Reporte Inventario</span>
                                                                     <Ripple />
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a onClick={() => handleNavigation('/items/inventory_kardex')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                                <a onClick={() => handleNavigation('/items/inventory_kardex')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                                     <i className="pi pi-search mr-2"></i>
                                                                     <span className="font-medium">Reporte Kardex</span>
                                                                     <Ripple />
@@ -112,28 +112,28 @@ export default function SidebarComponent() {
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/orders')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/orders')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-users mr-2"></i>
                                                             <span className="font-medium">Pedidos</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/sales')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/sales')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-users mr-2"></i>
                                                             <span className="font-medium">Ventas</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/reports')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/reports')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-calendar mr-2"></i>
                                                             <span className="font-medium">Reportes</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/configuration')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                                                        <a onClick={() => handleNavigation('/configuration')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-cog mr-2"></i>
                                                             <span className="font-medium">Configuracion</span>
                                                             <Ripple />
@@ -145,7 +145,7 @@ export default function SidebarComponent() {
                                     </div>
                                     <div className="mt-auto">
                                         <hr className="mb-3 mx-3 border-top-1 border-none surface-border" />
-                                        <a v-ripple className="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                        <a className="m-3 flex align-items-center cursor-pointer p-3 gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple no-underline">
                                             {/* <Avatar image="https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png" shape="circle" /> */}
                                             <span className="font-bold">Username</span>
                                         </a>
