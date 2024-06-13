@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './Pedidos.module.css';
 import SidebarComponent from "../../../Components/Sidebar";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Actividad = () => {
 
