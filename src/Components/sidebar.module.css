@@ -1,0 +1,17 @@
+.hamburgerButton {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background-color: #007ad9;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburgerButton:hover {
+    background-color: #0e26af;
+}

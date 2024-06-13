@@ -4,9 +4,10 @@ import { Column } from 'primereact/column';
 import SidebarComponent from "../../../Components/Sidebar";
 import style from "../items/styles/product.module.css";
 import { Button } from 'primereact/button';
+import { Dialog } from 'primereact/dialog';
+import { InputText } from 'primereact/inputtext';
 
 export default function Productos() {
-
     const [products, setProducts] = useState([
         { "code": "001", "name": "Product 1", "category": "Category A", "quantity": 10 },
         { "code": "002", "name": "Product 2", "category": "Category B", "quantity": 20 },
@@ -20,37 +21,63 @@ export default function Productos() {
         { "code": "010", "name": "Product 10", "category": "Category C", "quantity": 16 }
     ]);
 
+    const [displayModal, setDisplayModal] = useState(false);
+    const [newProduct, setNewProduct] = useState({ code: '', name: '', category: '', quantity: 0 });
+
+    const openModal = () => {
+        setDisplayModal(true);
+    }
+
+    const hideModal = () => {
+        setDisplayModal(false);
+    }
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setNewProduct({ ...newProduct, [name]: value });
+    }
+
     return (
+        <div className={style.container}>
+            <SidebarComponent />
+            <div className={style.content}>
+                <div className={style.header}>
+                    <h1>Listado de Productos</h1>
+                    <Button label="Agregar Producto" icon="pi pi-plus" className={style.addButton} onClick={openModal} />
+                </div>
+                <DataTable value={products} className={style.dataTable}>
+                    <Column field="code" header="Código"></Column>
+                    <Column field="name" header="Nombre"></Column>
+                    <Column field="category" header="Categoría"></Column>
+                    <Column field="quantity" header="Cantidad"></Column>
+                </DataTable>
 
-        <>
 
-            <div className={`${style.container}`}>
-
-                <div className='flex align-items-center justify-content-between' style={{border:"1px solid #000"}}>
-                    <SidebarComponent />
-                    <div className="crud-option-button">
-                        <Button label='Crear' severity='success'></Button>
+                 
+                <Dialog header="Agregar Producto" visible={displayModal} style={{ width: '50vw', fontSize: '18px'  }} onHide={hideModal}>
+                    <div className="p-fluid">
+                        <div className="p-field" style={{paddingTop: '20px' , margin: '10px'}}>
+                            <label htmlFor="code">Código</label>
+                            <InputText id="code" name="code" value={newProduct.code} onChange={handleInputChange} />
+                        </div>
+                        <div className="p-field" style={{paddingTop: '20px', margin: '10px'}}>
+                            <label htmlFor="name">Nombre</label>
+                            <InputText id="name" name="name" value={newProduct.name} onChange={handleInputChange} />
+                        </div>
+                        <div className="p-field" style={{paddingTop: '20px', margin: '10px'}}>
+                            <label htmlFor="category">Categoría</label>
+                            <InputText id="category" name="category" value={newProduct.category} onChange={handleInputChange} />
+                        </div>
+                        <div className="p-field" style={{paddingTop: '20px', margin: '10px'}}>
+                            <label htmlFor="quantity">Cantidad</label>
+                            <InputText id="quantity" name="quantity" type="number" value={newProduct.quantity} onChange={handleInputChange} />
+                        </div>
+                        <div className="p-field" style={{paddingTop: '10px'}}>
+                            <Button label="Cerrar" icon="pi pi-times" onClick={hideModal} />
+                        </div>
                     </div>
-                </div>
-
-                <div className="title-module">
-                    <p>Listado de productos</p>
-                </div>
-
-                <div className="table-products">
-                    <div className="card">
-                        <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
-                            <Column field="code" header="Code"></Column>
-                            <Column field="name" header="Name"></Column>
-                            <Column field="category" header="Category"></Column>
-                            <Column field="quantity" header="Quantity"></Column>
-                        </DataTable>
-                    </div>
-                </div>
-                
+                </Dialog>
             </div>
-
-        </>
-
+        </div>
     );
 }
