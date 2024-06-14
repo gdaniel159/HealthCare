@@ -46,9 +46,9 @@ export default function LoginComponent() {
     return (
         <div className={`${style.login_container}`}>
             <div className={`${style.card} border-none`}>
-                <h1 id={`${style.h1_n1}`}>HealthCare Innovations</h1>
+                <h1 id={`${style.h1_n1}`} className='mb-2' style={{color:"#fff"}}>HealthCare Innovations</h1>
                 <form onSubmit={handleLogin} className="p-fluid">
-                    <h2 className={`${style.title}`}>Iniciar Sesión</h2>
+                    <h2 className={`${style.title} text-center mb-3`} style={{color:"#fff"}}>Iniciar Sesión</h2>
 
                     <div className={`${style.field}`}>
                         <label htmlFor="email" className="p-sr-only">Email</label>

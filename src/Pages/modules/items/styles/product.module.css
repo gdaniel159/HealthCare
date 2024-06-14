@@ -1,17 +1,45 @@
 .container {
-    width: 80%;
-    margin: 30px auto;
-    /* border: 1px solid #000; */
+    padding: 2rem;
+    background-color: #f9f9f9;
 }
 
-.title-module {
-    margin: 10px 0;
-    font-size: 28px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d3e5ff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
-.table-products {
-    margin: 20px 0;
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.addButton {
+    background-color: #28a745 !important;
+    border: none !important;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tableContainer {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dataTable {
+    /* border: 5px solid #204d9f; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.p-fluid .field {
+    margin-bottom: 1rem;
 }

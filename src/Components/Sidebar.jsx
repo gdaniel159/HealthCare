@@ -27,7 +27,7 @@ export default function SidebarComponent() {
         }
         return Date.now() > expirationTime;
     }
-    
+
     function getToken() {
         if (isTokenExpired()) {
             localStorage.removeItem('token');
@@ -80,8 +80,15 @@ export default function SidebarComponent() {
                                                     </li>
                                                     <li>
                                                         <a onClick={() => handleNavigation('/items')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
-                                                            <i className="pi pi-bookmark mr-2"></i>
+                                                            <i className="pi pi-ticket mr-2"></i>
                                                             <span className="font-medium">Productos</span>
+                                                            <Ripple />
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a onClick={() => handleNavigation('/insumos')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
+                                                            <i className="pi pi-ticket mr-2"></i>
+                                                            <span className="font-medium">Insumos</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
@@ -112,28 +119,28 @@ export default function SidebarComponent() {
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/orders')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
+                                                        <a onClick={() => handleNavigation('/orders')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-users mr-2"></i>
                                                             <span className="font-medium">Pedidos</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/sales')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
+                                                        <a onClick={() => handleNavigation('/sales')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-users mr-2"></i>
                                                             <span className="font-medium">Ventas</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/reports')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
+                                                        <a onClick={() => handleNavigation('/reports')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-calendar mr-2"></i>
                                                             <span className="font-medium">Reportes</span>
                                                             <Ripple />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a onClick={() => handleNavigation('/configuration')}  className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
+                                                        <a onClick={() => handleNavigation('/configuration')} className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline">
                                                             <i className="pi pi-cog mr-2"></i>
                                                             <span className="font-medium">Configuracion</span>
                                                             <Ripple />
@@ -155,9 +162,9 @@ export default function SidebarComponent() {
                         </div>
                     )}
                 ></Sidebar>
-            
 
-            <Button icon="pi pi-align-justify" onClick={() => setVisible(true)} />
+
+                <Button icon="pi pi-align-justify" onClick={() => setVisible(true)} />
             </div>
         </>
 

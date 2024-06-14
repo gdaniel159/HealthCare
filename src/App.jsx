@@ -9,6 +9,7 @@ import Orders from "./Pages/modules/orders/ordes";
 import Sales from "./Pages/modules/sales/sales";
 import Reports from "./Pages/modules/reports/reports";
 import Configuration from "./Pages/modules/configuration/configuration";
+import Insumos from "./Pages/modules/insumos/Insumos";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePage/>}></Route>
           <Route path="/home" element={<Inicio />}></Route>
           <Route path="/items" element={<Productos />}></Route>
+          <Route path="/insumos" element={<Insumos />}></Route>
           <Route path="/items/inventory_report" element={<InventoryReport/>}></Route>
           <Route path="/items/inventory_kardex" element={<InventoryKardex/>}></Route>
           <Route path="/orders" element={<Orders/>}></Route>
